@@ -1,26 +1,24 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en" ng-app>
-<head>
-  <meta charset="UTF-8">
-  <title>Angular Demo</title>
-  <script src="lib/angular/angular.min.js"></script>
-</head>
-<body>
+	<head>
+		<meta charset="utf-8">
+		<title>Angular Demo</title>
+		<script src="lib/angular/angular.min.js"></script>
+	</head>
+	<body>
+		<div ng-controller = "MyController">
+			<h1>{{author.name}}</h1>
+			<p>{{ author.title + ', ' + author.company }}</p>
+		</div>
 
-<div ng-controller = "MyController">
-  <h1>{{author.name}}</h1>
-  <p>{{ author.title + ', ' + author.company }}</p>
-</div>
-
-<script>
-
-function MyController($scope) {
-  $scope.author = {
-    'name' : 'Ray Villalobos',
-    'title' : 'Staff Author',
-    'company' : 'Lynda.com'
-  }
-}
-</script>
-</body>
+		<script>
+			function MyController($scope) {
+				$scope.author = {
+					'name' : 'Brandon Wolfgang',
+					'title' : 'Developer',
+					'company' : 'brandonwolfgang.com'
+				}
+			}
+		</script>
+	</body>
 </html>
